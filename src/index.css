@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cards {
+  margin: 200px auto;
+  width: 950px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 50px;
+  position: relative;
+}
+
+.card img {
+  height: 50px;
+}
+
+.card h1 {
+  font-size: 50px;
+  color: hsl(0, 0%, 95%);
+  margin: 20px 0;
+  font-family: "Big Shoulders Display", cursive;
+  letter-spacing: 3px;
+}
+
+.card p {
+  color: hsl(0, 0%, 95%);
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.card button {
+  width: 60%;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 50px;
+  font-weight: 700;
+}
+
+.card button:hover {
+  cursor: pointer;
+  border: 3px solid hsl(0, 0%, 95%);
+}
+
+.card button:focus {
+  outline: none;
+}
+
+.attribution {
+  width: 100vw;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.attribution a {
+  background: lawngreen;
+  color: hsl(0, 0%, 95%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 10px;
+  border: 2px lawngreen solid;
+}
+
+.attribution a:hover {
+  background: hsl(0, 0%, 95%);
+  color: lawngreen;
+}
+
+.attribution p,
+.attribution a {
+  display: inline;
+}
+
+@media screen and (max-width: 376px) {
+  .App {
+    overflow: scroll;
+  }
+
+  .attribution {
+    transform: translateY(-120px);
+  }
+
+  .attribution p,
+  .attribution a {
+    display: block;
+  }
+
+  .attribution a {
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 90vw;
+    margin-top: 100px;
+    height: 1500px;
+  }
+}
